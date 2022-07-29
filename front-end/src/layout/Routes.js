@@ -1,11 +1,12 @@
 import React from "react";
-
+import Reservation from "./Reservation";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Dashboard from "../dashboard/Dashboard";
 import NotFound from "./NotFound";
 import { today } from "../utils/date-time";
 import NewRes from "../layout/NewRes";
 import { useParams } from "react-router-dom";
+import NewTable from "../tables/NewTable";
 //get api url from environment variables
 
 
@@ -31,6 +32,12 @@ function Routes() {
       </Route>
       <Route path="/reservations/new">
         <NewRes/>
+      </Route>
+      <Route path="/reservations/:reservation_id">
+        <Reservation/>
+      </Route>
+      <Route path="/tables/new">
+        <NewTable/>
       </Route>
       <Route>
         <NotFound />
