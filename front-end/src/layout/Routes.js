@@ -8,6 +8,7 @@ import NewRes from "../layout/NewRes";
 import { useParams } from "react-router-dom";
 import NewTable from "../tables/NewTable";
 import Search from "./Search";
+import EditReservation from "./EditReservation";
 //get api url from environment variables
 
 
@@ -36,6 +37,9 @@ function Routes() {
       </Route>
       <Route path="/reservations/:reservation_id">
         <Reservation/>
+      </Route>
+      <Route exact={true} path="/reservations/:reservation_id/edit">
+        <EditReservation />
       </Route>
       <Route path="/tables/new">
         <NewTable/>
