@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
  * @returns {JSX.Element}
  */
 
-function Menu() {
+function Menu({setIsOpen}) {
   return (
     <nav className="navbar navbar-dark align-items-start p-0">
       <div className="container-fluid d-flex flex-column p-0">
@@ -52,7 +52,10 @@ function Menu() {
             className="btn rounded-circle border-0"
             id="sidebarToggle"
             type="button"
-          />
+            onClick={() => setIsOpen(false)}
+          >
+            Hide Menu
+          </button>
         </div>
       </div>
     </nav>
@@ -60,3 +63,5 @@ function Menu() {
 }
 
 export default Menu;
+
+

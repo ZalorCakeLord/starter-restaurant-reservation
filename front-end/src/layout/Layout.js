@@ -12,12 +12,25 @@ import "./Layout.css";
  * @returns {JSX.Element}
  */
 function Layout() {
+  const [isOpen, setIsOpen] = React.useState(true);
   return (
     <div className="container-fluid">
       <div className="row h-100">
-        <div className="col-md-2 side-bar">
-          <Menu />
-        </div>
+        {isOpen ? (
+          <div className="col-md-2 side-bar">
+            <Menu setIsOpen={setIsOpen}/>
+          </div>
+        ) : (
+          <button
+            className="btn rounded-circle border-0"
+            id="sidebarToggle"
+            type="button"
+            onClick={() => setIsOpen(true)}
+          >
+            ➕
+          </button>
+        )}
+        
         <div className="col">
           <Routes />
         </div>
@@ -27,3 +40,4 @@ function Layout() {
 }
 
 export default Layout;
+
