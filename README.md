@@ -1,6 +1,6 @@
 # Capstone: Restaurant Reservation System
 
-A fully functional restaurant reservation system written in React.js, communicating with a backend server running on Node.js, which itself communicates with a GRESQL database.
+A fully functional restaurant reservation system written in React.js, communicating with a backend server running on Node.js, which itself communicates with a PostGreSQL database.
 
 Features:
 
