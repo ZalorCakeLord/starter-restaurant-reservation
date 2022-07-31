@@ -71,7 +71,7 @@ export default function ResTable({
               data-reservation-id-cancel={reservation.reservation_id}
               name="Cancel"
               onClick={cancelHandler}
-              className="btn btn-warning"
+              className="btn btn-danger"
               style={{ fontSize: "14px" }}
             >
               <span className="oi oi-x"></span>
